@@ -1,0 +1,93 @@
+footer{
+    border-top: 2px solid #AA7B52;
+    background-color: #1A0A0A;
+    padding-top: 50px;
+    /* padding-bottom: 50px; */
+}
+.footer-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-logo{
+    color: white;
+    font-size: 25px;
+    font-family: "Source Sans 3", sans-serif;
+}
+.footer-card h3{
+    color: #F7C27E;
+    font-family: "Source Sans 3", sans-serif; 
+}
+.footer-card h4{
+    margin-top: 5px ;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: #D8C3B2;
+    font-family: "Source Sans 3", sans-serif; 
+}
+.footer-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.footer-media svg{
+    margin-top: 5px;
+    color: #F7C27E;
+    font-size: 30px;
+}
+.footer-media svg:hover{
+    color: white;
+}
+.footer-logo img{
+    width: 120px;
+}
+.footer-card a {
+    color: #D8C3B2;
+}
+.devosoft{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+    position: relative;
+}
+.devosoft img{
+    width: 50px;
+    height: 50px;
+}
+.devImg{
+    width: 140px !important;
+    visibility: hidden;
+    position: absolute;
+    bottom: 100%; /* Выровнять содержимое снизу */
+    transform: translateY(100%);
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+.footer__logo2:hover .devImg{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(100%);
+}
+.devosoft h2{
+    color: white;
+}
+@media(max-width:750px){
+    .footer-wrapper{
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+@media(max-width:350px){
+    .footer-logo{
+        font-size: 20px;
+    }
+    .devosoft{
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,200 @@
+.PdfAdmin{
+    background-color: #1A0A0A;
+    display: flex;
+    /* overflow: hidden; */
+    width: 100%;
+    height: 100vh;
+}
+.PdfAdmin-content{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+.PdfAdmin-header{
+    width: 100%;
+    padding: 30px 20px;
+    background-color: #D9A359;
+}
+.PdfAdmin-header h1{
+    color: #1A0A0A;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+}
+.PdfAdmin-main{
+    padding: 30px 15px;
+}
+.file-upload {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .file-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 370px;
+    height: 200px;
+    border: 2px dashed #D9A359;
+    border-radius: 30px;
+    cursor: pointer;
+
+  }
+  
+  .file-icon {
+    font-size: 48px;
+    color: #D9A359;
+  }
+  
+  .file-text {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #D9A359;
+    font-family: "Roboto", sans-serif;
+  }
+  .PdfAdmin-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+  }
+  .header-burger button {
+    background-color: #1A0A0A;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.header-burger button svg {
+    color: #D9A359;
+    font-size: 30px;
+}
+.header-burger{
+    /* padding: 10px; */
+    padding-bottom: 0;
+    width: 100%;
+    background-color: #D9A359;
+}
+.header-burger{
+    display: none;
+}
+.PdfAdmin-wrapper-card img{
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid #D9A359;
+  width: 370px;
+  height: 200px;
+}
+.pdf-check{
+    position: relative;
+    width: 370px;
+    height: 200px;
+    background-color: #D9A359;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pdf-check h1{
+    color:#1A0A0A;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.pdf-check h1 svg{
+
+}
+.pdf-bg{
+    background-color: rgba(0, 0, 0, 0.952);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+
+    display: none;
+}
+.pdf-check:hover{
+    .pdf-bg{
+        cursor: pointer;
+        display: block;
+    }
+
+}
+.pdf-bg button{
+    margin: 0 auto;
+    margin-top: 75px;
+    display: block;
+    font-size: 50px;
+    background-color: transparent;
+    border: none;
+    color: red;
+}
+  @media(max-width:1850px){
+    .PdfAdmin-wrapper{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+  }
+  @media(max-width:1530px){
+    .PdfAdmin-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+  }
+  @media(max-width:1100px){
+    .PdfAdmin-wrapper{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        justify-content: center;
+    }
+  }
+  @media(max-width:1000px){
+    .PdfAdmin-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        justify-content: center;
+    }
+  }
+  @media(max-width:1400px){
+    .header-burger{
+        display: block;
+    }
+    .PdfAdmin-header{
+        padding-top: 5px;
+    }
+}
+  @media(max-width:780px){
+    .PdfAdmin-wrapper{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        justify-content: center;
+    }
+  }
+  @media(max-width:400px){
+    .file-label{
+        width: 350px;
+    }
+  }
+  @media(max-width:360px){
+    .file-label{
+        width: 300px;
+    }
+  }
+  @media(max-width:310px){
+    .file-label{
+        width: 100%;
+    }
+  }

@@ -1,0 +1,327 @@
+header{
+    background-color: #130202;
+    padding: 15px 80px;
+    width: 100%;
+    position:fixed;
+    z-index: 33;
+}
+.header-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-menu{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.header-logo h1{
+    color: #D9A359;
+    font-size: 69px;
+    font-weight: normal;
+    line-height: 1.1em;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.11);
+    display: none;
+
+}
+.header-logo h1 span{
+    color: #D0B08B;
+}
+.header-menu-item{
+    text-decoration: none;
+    color: #f7c27e;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+}
+.header-btn a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    background-color: #D0B08B;
+    border-radius: 50px;
+    border: 2px solid #D0B08B;
+}
+.header-btn a:hover{
+    background-color: transparent;
+    .header-btn-icon{
+        color: #D0B08B;
+    }
+}
+.header-btn svg{
+    color: #130202;
+    font-size: 25px;
+}
+
+.burger {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 22;
+}
+
+.burger__line {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #D0B08B ;
+    position: absolute;
+    left: 0;
+    transition: .3s all linear;
+}
+
+.burger__line_first {
+    top: 0;
+}
+
+.burger__line_second,
+.burger__line_third {
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+.burger__line_fourth {
+    bottom: 0;
+}
+
+.burger_active .burger__line_first,
+.burger_active .burger__line_fourth {
+    opacity: 0;
+    
+}
+
+.burger_active .burger__line_second {
+    transform: translateY(-50%) rotate(45deg);
+    background-color: #fff;
+}
+
+.burger_active .burger__line_third {
+    transform: translateY(-50%) rotate(-45deg);
+    background-color: #fff;
+}
+.burger{
+    display: none;
+}
+
+.header-modal-mobile{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+	height: 100vh;
+    background-color: #04070C;
+    padding: 24px;
+    overflow-y: auto;
+    transform: translateX(-100%);
+	transition: all 2s ease;
+    z-index: 11;
+}
+
+.header-menu-mobile .header-menu-item{
+    display: block;
+    margin-bottom: 20px;
+}
+.header-logo-mobile{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.header-logo-mobile h1{
+    color: white;
+    font-size: 35px;
+    font-family: "Source Sans 3", sans-serif;
+}
+.header-logo-mobile span{
+    color: #D0B08B;
+}
+
+.header-mobile-shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(51, 51, 51, .5);
+    transform: translateX(-100%);
+    transition: all .6s cubic-bezier(0.45, 0.48, 0.75, 0.76) 1s;
+    visibility: visible;
+    z-index: 10;
+}
+.db{
+    transform: translateX(0);
+}
+.db_shadow{
+    transform: translateX(0);
+    transition: all .6s cubic-bezier(.22,.61,.24,1) 0s;
+}
+.header_bg{
+    background-color: hsla(0, 80%, 4%, 0.795);
+}
+.logo{
+    width: 150px;
+    height: 100px;
+}
+.mobile-logo{
+    display: none;
+   
+}
+.Header-btn{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.Header-btn button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 30px;
+    background-color: #D0B08B;
+    border-radius: 50px;
+    border: 2px solid #D0B08B;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Source Sans 3", sans-serif;
+    transition: 0.5s;
+}
+.Header-btn button:hover{
+    background-color: #130202;
+    color: #D0B08B;
+}
+
+.logo{
+    width: 100px;
+    height: 80px;
+}
+.header-logo-mobile{
+    width: 100px !important;
+    height: 80px !important;
+}
+@media(max-width:1090px){
+    .header-menu{
+        display: none;
+    }
+    header{
+        padding: 42px 15px ;
+    }
+    .burger{
+        display: block;
+    }
+    .header-logo h1{
+        display: block;
+    }
+    .header-logo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
+@media(max-width:650px){
+.header-logo h1{
+    display: none;
+}
+}
+@media(max-width:550px){
+    .Header-btn button{
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+    .header-btn a{
+        padding: 7px 10px;
+        border-radius: 10px;
+    }
+    .logo{
+        width: 90px;
+        height: 60px;
+    }
+    .header-logo h1{
+        display: none;
+    }
+}
+@media(max-width:400px){
+    .header-logo h1{
+        font-size: 22px;
+    }
+    .header-btn a{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .header-btn svg{
+        font-size: 20px;
+    }
+    .Header-btn button{
+        font-size: 15px;
+    }
+}
+@media(max-width:315px){
+    .Header-btn{
+        gap: 5px;
+    }
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color:#130202;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #D0B08B}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: transparent;
+    color: #f7c27e;
+  }
+  .dropdown-content{
+    padding-top: 10px;
+    /* margin-top: 10px; */
+    background-color: transparent;
+  }
+  .dropdown-content button{
+    width: 90%;
+    margin-bottom: 5px;
+  }
+  @media(max-width:430px){
+    .dropdown-content button{
+        width: 55%;
+        margin-bottom: 5px;
+      }
+  }
